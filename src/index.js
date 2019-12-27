@@ -85,13 +85,84 @@
 // console.log(wrap1());
 // console.log(wrap2());
 
-//another example
-function multiplier(factor) {
-  return number => number * factor;
-}
-let twice = multiplier(2);
-console.log(twice(10));
-let thrice = multiplier(3);
-console.log(thrice(10));
+// //another example
+// function multiplier(factor) {
+//   return number => number * factor;
+// }
+// let twice = multiplier(2);
+// console.log(twice(10));
+// let thrice = multiplier(3);
+// console.log(thrice(10));
 
 /**CLOSURE - End*/
+
+/**RECURSION - START
+ *
+ *
+ */
+//power function using recursion
+// function power(base, exponent) {
+//   if (exponent === 0) {
+//     return 1;
+//   } else {
+//     return base * power(base, exponent - 1);
+//   }
+// }
+// console.log(power(2,4));
+
+// //math puzzle in page 81
+// function findSolution(target) {
+//   function find(current, history) {
+//     if (current === target) {
+//       return history;
+//     } else if (current > target) {
+//       return null;
+//     } else {
+//       return (
+//         find(current + 5, `(${history} + 5)`) ||
+//         find(current * 3, `(${history} * 3)`)
+//       );
+//     }
+//   }
+//   return find(1, "1");
+// }
+// console.log(findSolution(6));
+/**RECURSION - END */
+
+/**
+ * GROWING FINCTIONS - START
+ */
+// //Printing farm inventory with repeating codes
+// function printFarmInventory(cows, chicken) {
+//   let cowString = String(cows);
+//   while (cowString.length < 3) {
+//     cowString = "0" + cowString;
+//   }
+//   console.log(`${cowString} Cows`);
+//   let chickenString = String(chicken);
+//   while (chickenString.length < 3) {
+//     chickenString = "0" + chickenString;
+//   }
+//   console.log(`${chickenString} Chicken`);
+// }
+// printFarmInventory(727, 11);
+
+// Implement the same code without repeating yourself
+
+function zeroPadding(number, width) {
+  let numberString = String(number);
+  while (numberString.length < width) {
+    numberString = "0" + numberString;
+  }
+  return numberString;
+}
+function printFarmInventory(cows, chicken, pigs) {
+  console.log(zeroPadding(cows, 3) + " Cows");
+  console.log(zeroPadding(chicken, 3) + " Chicken");
+  console.log(zeroPadding(pigs, 3) + " Pigs");
+}
+printFarmInventory(27, 11, 7);
+
+/**
+ * GROWING FINCTIONS - END
+ */
