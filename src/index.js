@@ -149,20 +149,71 @@
 
 // Implement the same code without repeating yourself
 
-function zeroPadding(number, width) {
-  let numberString = String(number);
-  while (numberString.length < width) {
-    numberString = "0" + numberString;
-  }
-  return numberString;
-}
-function printFarmInventory(cows, chicken, pigs) {
-  console.log(zeroPadding(cows, 3) + " Cows");
-  console.log(zeroPadding(chicken, 3) + " Chicken");
-  console.log(zeroPadding(pigs, 3) + " Pigs");
-}
-printFarmInventory(27, 11, 7);
+// function zeroPadding(number, width) {
+//   let numberString = String(number);
+//   while (numberString.length < width) {
+//     numberString = "0" + numberString;
+//   }
+//   return numberString;
+// }
+// function printFarmInventory(cows, chicken, pigs) {
+//   console.log(zeroPadding(cows, 3) + " Cows");
+//   console.log(zeroPadding(chicken, 3) + " Chicken");
+//   console.log(zeroPadding(pigs, 3) + " Pigs");
+// }
+// printFarmInventory(27, 11, 7);
 
 /**
  * GROWING FINCTIONS - END
+ */
+
+/**Chapter 3 exercise - Start
+ *
+ *
+ */
+//Minimum function
+
+// function min(num1, num2) {
+//   if (num2 < num1) return num2;
+//   else return num1;
+// }
+// console.log(min(-3,-2));
+
+// //Recursion excercise
+// function isEven(number) {
+//   //if (number < 0) number = -number;
+//   number = Math.abs(number); //using built in math function
+//   if (number === 0) {
+//     return true;
+//   } else if (number === 1) {
+//     return false;
+//   } else {
+//     return isEven(number - 2);
+//   }
+// }
+// console.log(isEven(-50));
+
+//Bean counting
+// let line = "The less you talk, the more you are listened to.";
+// function countChar(line, char) {
+//   let counter = 0;
+//   let length = line.length;
+//   //recursive function
+//   function findChar(length) {
+//     if (length === 0) {
+//       return counter;
+//     }
+//     if (line[length - 1] === char) {
+//       counter++;
+//     }
+//     length--;
+//     return findChar(length);
+//   }
+//   return findChar(length);
+// }
+// console.log(countChar(line, " "));
+
+/**Chapter 3 exercise - End
+ *
+ *
  */
