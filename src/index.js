@@ -213,7 +213,4 @@
 // }
 // console.log(countChar(line, " "));
 
-/**Chapter 3 exercise - End
- *
- *
- */
+/**Chapter 3 exercise - End*****/
