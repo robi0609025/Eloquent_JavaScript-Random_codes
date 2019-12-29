@@ -86,4 +86,20 @@
 
 // console.log(journal);
 
-/**MUTABILITY */
+//Correlation - Phi coefficient
+
+let journal = [];
+console.log(journal);
+
+function phi(table) {
+  return (
+    (table[0] * table[3] - table[1] * table[2]) /
+    Math.sqrt(
+      (table[0] + table[1]) *
+        (table[2] + table[3]) *
+        (table[0] + table[2]) *
+        (table[1] + table[3])
+    )
+  );
+}
+console.log(phi([76, 9, 4, 1]));
