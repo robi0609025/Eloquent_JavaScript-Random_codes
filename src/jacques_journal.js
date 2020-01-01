@@ -1,4 +1,6 @@
-var JOURNAL = [
+export { JOURNAL };
+
+let JOURNAL = [
   { events: ["carrot", "exercise", "weekend"], squirrel: false },
   {
     events: ["bread", "pudding", "brushed teeth", "weekend", "touched tree"],

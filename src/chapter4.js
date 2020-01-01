@@ -86,20 +86,92 @@
 
 // console.log(journal);
 
-//Correlation - Phi coefficient
+// /**SQUIRRELMAN - starts here */
 
-let journal = [];
-console.log(journal);
+// //Correlation - Phi coefficient
 
-function phi(table) {
-  return (
-    (table[0] * table[3] - table[1] * table[2]) /
-    Math.sqrt(
-      (table[0] + table[1]) *
-        (table[2] + table[3]) *
-        (table[0] + table[2]) *
-        (table[1] + table[3])
-    )
-  );
-}
-console.log(phi([76, 9, 4, 1]));
+// import JOURNAL from "/src/jacques_journal.js";
+
+// /**phi function to calculate correlation coefficient  */
+// function phi(table) {
+//   return (
+//     (table[0] * table[3] - table[1] * table[2]) /
+//     Math.sqrt(
+//       (table[0] + table[1]) *
+//         (table[2] + table[3]) *
+//         (table[0] + table[2]) *
+//         (table[1] + table[3])
+//     )
+//   );
+// }
+// //console.log(phi([76, 9, 4, 1]));
+
+// //console.log(JOURNAL.length);
+
+// function tableFor(event, journal) {
+//   let table = [0, 0, 0, 0];
+//   //for (let i = 0; i < journal.length; i++) {
+//   for (let entry of journal) {
+//     // if (journal[i].squirrel && journal[i].events.includes(event)) {
+//     //   table[3]++;
+//     // } else if (journal[i].squirrel && !journal[i].events.includes(event)) {
+//     //   table[2]++;
+//     // } else if (!journal[i].squirrel && journal[i].events.includes(event)) {
+//     //   table[1]++;
+//     // } else {
+//     //   table[0]++;
+//     // }
+
+//     //refactoring the conditions - a better way
+//     let index = 0;
+//     if (entry.events.includes(event)) {
+//       index += 1;
+//     }
+//     if (entry.squirrel) {
+//       index += 2;
+//     }
+//     table[index]++;
+//   }
+//   return table;
+// }
+
+// //console.log(tableFor("pizza", JOURNAL));
+// //console.log(phi(tableFor("pizza", JOURNAL)));
+
+// function journalEvents(journal) {
+//   let listOfEvents = [];
+//   for (let entry of journal) {
+//     //console.log(entry);
+//     for (let event of entry.events) {
+//       //console.log(event);
+//       if (!listOfEvents.includes(event)) {
+//         listOfEvents.push(event);
+//       }
+//     }
+//   }
+//   return listOfEvents;
+// }
+// //journalEvents(JOURNAL);
+// //console.log(journalEvents(JOURNAL));
+// //onsole.log(journalEvents(JOURNAL).length);
+
+// //checking the phi coefficient
+// for (let event of journalEvents(JOURNAL)) {
+//   //console.log(event);
+//   let occuranceTable = tableFor(event, JOURNAL);
+//   //console.log(occuranceTable);
+//   let phiCoefficient = phi(occuranceTable);
+//   if (phiCoefficient > 0.2 || phiCoefficient < -0.2) {
+//     //console.log(`${event} : ` + phiCoefficient);
+//   }
+// }
+
+// //combining 2 phi coefficient
+// for (let entry of JOURNAL) {
+//   if (entry.events.includes("peanuts") && !entry.events.includes("brushed teeth")){
+//     entry.events.push("peanut teeth");
+//   }
+// }
+// console.log( phi( tableFor("peanut teeth", JOURNAL)));
+
+// /**SQUIRRELMAN - finishes here */
