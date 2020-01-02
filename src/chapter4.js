@@ -175,3 +175,8 @@
 // console.log( phi( tableFor("peanut teeth", JOURNAL)));
 
 // /**SQUIRRELMAN - finishes here */
+
+/**Further Arrayology */
+//push, pop, shift, unShift
+console.log([1, 2, 3, 4].indexOf(4))
+/**Further Arrayology */
