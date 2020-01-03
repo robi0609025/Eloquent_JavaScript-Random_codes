@@ -179,15 +179,35 @@
 /**Further Arrayology */
 //push, pop, shift, unShift
 //console.log([1, 2, 3, 4].indexOf(4))
-let arr = ["a", "b", "c", "d", "e"];
-let arr1 = arr.slice(0, 2);
-let arr2 = arr.slice(3);
-let finalArray = arr1.concat(arr2);
-//console.log(finalArray);
-//console.log(arr.slice(0, 2).concat(arr.slice(3))); //works same way like the previous one.
-//to remove an element by index from an array
-function remove(array, index) {
-  return array.slice(0, index).concat(array.slice(index + 1));
-}
-console.log(remove(arr, 0));
+// let arr = ["a", "b", "c", "d", "e"];
+// let arr1 = arr.slice(0, 2);
+// let arr2 = arr.slice(3);
+// let finalArray = arr1.concat(arr2);
+// //console.log(finalArray);
+// //console.log(arr.slice(0, 2).concat(arr.slice(3))); //works same way like the previous one.
+// //to remove an element by index from an array
+// function remove(array, index) {
+//   return array.slice(0, index).concat(array.slice(index + 1));
+// }
+// console.log(remove(arr, 0));
 /**Further Arrayology */
+
+/**String and their properties */
+//length, toUpperCase, toLowerCase, slice, indexOf, lastIndexOf, trim, padStart, split, join, repeat
+//let kim = "Kim";
+//console.log(kim.length);
+//console.log(kim.toUpperCase());
+//console.log(kim.toLowerCase());
+// console.log("coconuts".slice(4, 7));
+// console.log("coconuts".indexOf("u"));
+// console.log("coconuts".indexOf("c"));
+// console.log("coconuts".lastIndexOf("c"));
+// console.log("one two three".indexOf("ee"));
+// console.log(" Okay \n \t ".trim()); // remove spaces, new line, tab and similar characters
+//console.log(String(6).padStart(3, "0")); // add padding at the front of string
+
+// let sentence = "Secretarybirds specialize in stomping";
+// let words = sentence.split(" ");
+// console.log(words);
+// console.log(words.join(". "));
+//console.log("LA..".repeat(3));
