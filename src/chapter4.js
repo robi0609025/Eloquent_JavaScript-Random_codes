@@ -215,19 +215,37 @@
 //Rest parameters
 // ...[1, 2, 3, 4] = 1, 2, 3, 4
 
-function max(...numbers) {
-  let result = -Infinity;
-  for (let number of numbers) {
-    result = number > result ? number : result;
-  }
-  return result;
-}
-console.log(max(1, 2, 3, 12, 45, 45, -9, 48));
+// function max(...numbers) {
+//   let result = -Infinity;
+//   for (let number of numbers) {
+//     result = number > result ? number : result;
+//   }
+//   return result;
+// }
+// console.log(max(1, 2, 3, 12, 45, 45, -9, 48));
 
-let randomArray = [45, 5695, 6456, 6556, 154];
-console.log(max(...randomArray));
-console.log(max(...[1, 2, 3]));
+// let randomArray = [45, 5695, 6456, 6556, 154];
+// console.log(max(...randomArray));
+// console.log(max(...[1, 2, 3]));
 
-console.log(...[23, ...randomArray, 32]);
+// console.log(...[23, ...randomArray, 32]);
 
 //rest parameters end
+
+//The Math object
+
+//Math.max, Math.min, Math.sqrt, Math.sin(); cos; tan, acos; asin; atan
+//Math.floor; Math.ceil; Math.round; Math.abs
+//console.log(Math.PI);
+
+function randomPointOnCircle(radius) {
+  let randomAngle = Math.random() * 2 * Math.PI;
+  return {
+    x: radius * Math.cos(randomAngle),
+    y: radius * Math.sin(randomAngle)
+  };
+}
+
+console.log(randomPointOnCircle(2));
+
+//The Math objects - ends here
