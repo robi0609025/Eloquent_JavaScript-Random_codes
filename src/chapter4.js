@@ -211,3 +211,23 @@
 // console.log(words);
 // console.log(words.join(". "));
 //console.log("LA..".repeat(3));
+
+//Rest parameters
+// ...[1, 2, 3, 4] = 1, 2, 3, 4
+
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    result = number > result ? number : result;
+  }
+  return result;
+}
+console.log(max(1, 2, 3, 12, 45, 45, -9, 48));
+
+let randomArray = [45, 5695, 6456, 6556, 154];
+console.log(max(...randomArray));
+console.log(max(...[1, 2, 3]));
+
+console.log(...[23, ...randomArray, 32]);
+
+//rest parameters end
