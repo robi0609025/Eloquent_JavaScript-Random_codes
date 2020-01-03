@@ -178,5 +178,16 @@
 
 /**Further Arrayology */
 //push, pop, shift, unShift
-console.log([1, 2, 3, 4].indexOf(4))
+//console.log([1, 2, 3, 4].indexOf(4))
+let arr = ["a", "b", "c", "d", "e"];
+let arr1 = arr.slice(0, 2);
+let arr2 = arr.slice(3);
+let finalArray = arr1.concat(arr2);
+//console.log(finalArray);
+//console.log(arr.slice(0, 2).concat(arr.slice(3))); //works same way like the previous one.
+//to remove an element by index from an array
+function remove(array, index) {
+  return array.slice(0, index).concat(array.slice(index + 1));
+}
+console.log(remove(arr, 0));
 /**Further Arrayology */
